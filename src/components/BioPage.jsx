@@ -54,7 +54,7 @@ const BioPage = () => {
 
       <div className="flex flex-row">
         {/* Sidebar */}
-        <div className="bg-blue-600 h-[900px] p-5 w-[15%] text-white gap-10">
+        <div className="bg-blue-600 h-[1250px] p-5 w-[20%] text-white gap-10 mr-15">
           <div className="flex flex-row gap-3 items-center text-white mb-9">
             <img
               src=""
@@ -145,7 +145,7 @@ const BioPage = () => {
             </div>
           </div>
 
-          <div className="flex flex-row gap-8 items-center">
+          <div className="flex flex-row gap-5 items-center">
             <div className="shadow-xl flex flex-row w-[350px] p-3 px-10 gap-5 items-center justify-between rounded-3xl">
               <FaInstagram size={50} />
               <FaXTwitter size={50} />
@@ -155,63 +155,167 @@ const BioPage = () => {
             <BiMessageDetail size={70} />
           </div>
 
-          <div className="flex flex-col">
-            <h1>Catalog</h1>
-            <div className="flex flex-row gap-5 justify-between">
+          <div className="flex flex-col bg-gray-200 p-10 rounded-3xl m-5">
+            <h1 className="font-bold text-3xl pb-5">Catalog</h1>
+            <div className="flex flex-row gap-7 justify-between">
               <div>
                 <img
                   src={imageCat1}
-                  className="h-[350px] w-[400px] rounded-2xl"
+                  className="h-[350px] w-[450px] rounded-2xl"
                   alt=""
                 />
-                <h1>Product Name</h1>
-                <h4>$60</h4>
-                <h6></h6>
-              </div>
-
-              <div>
-                <img
-                  src={imageCat2}
-                  className="h-[350px] w-[400px] rounded-2xl"
-                  alt=""
-                />
-                <h1>Product Name</h1>
-                <h4>$60</h4>
-                <h6></h6>
+                <div className="flex flex-col gap-4">
+                  <h1 className="text-4xl">Product Name</h1>
+                  <h4 className="text-3xl">$60</h4>
+                  <h6 className="text-3xl">Short Description of the product</h6>
+                  <button className="text-3xl p-5 bg-blue-500 text-white rounded-2xl">
+                    View Details
+                  </button>
+                </div>
               </div>
 
               <div>
                 <img
                   src={imageCat1}
-                  className="h-[350px] w-[400px] rounded-2xl"
+                  className="h-[350px] w-[450px] rounded-2xl"
                   alt=""
                 />
-                <h1>Product Name</h1>
-                <h4>$60</h4>
-                <h6></h6>
-              </div>
-
-              <div>
-                <img
-                  src={imageCat2}
-                  className="h-[350px] w-[400px] rounded-2xl"
-                  alt=""
-                />
-                <h1>Product Name</h1>
-                <h4>$60</h4>
-                <h6></h6>
+                <div className="flex flex-col gap-4">
+                  <h1 className="text-4xl">Product Name</h1>
+                  <h4 className="text-3xl">$60</h4>
+                  <h6 className="text-3xl">Short Description of the product</h6>
+                  <button className="text-3xl p-5 bg-blue-500 text-white rounded-2xl">
+                    View Details
+                  </button>
+                </div>
               </div>
 
               <div>
                 <img
                   src={imageCat1}
-                  className="h-[350px] w-[400px] rounded-2xl"
+                  className="h-[350px] w-[450px] rounded-2xl"
                   alt=""
                 />
-                <h1>Product Name</h1>
-                <h4>$60</h4>
-                <h6></h6>
+                <div className="flex flex-col gap-4">
+                  <h1 className="text-4xl">Product Name</h1>
+                  <h4 className="text-3xl">$60</h4>
+                  <h6 className="text-3xl">Short Description of the product</h6>
+                  <button className="text-3xl p-5 bg-blue-500 text-white rounded-2xl">
+                    View Details
+                  </button>
+                </div>
               </div>
+
+              <div>
+                <img
+                  src={imageCat1}
+                  className="h-[350px] w-[450px] rounded-2xl"
+                  alt=""
+                />
+                <div className="flex flex-col gap-4">
+                  <h1 className="text-4xl">Product Name</h1>
+                  <h4 className="text-3xl">$60</h4>
+                  <h6 className="text-3xl">Short Description of the product</h6>
+                  <button className="text-3xl p-5 bg-blue-500 text-white rounded-2xl">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="Testimonials"
+            className="flex flex-col bg-gray-200 gap-10 p-10 text-3xl rounded-3xl items-center justify-center m-5"
+          >
+            <h1 className="text-blue-600">Testimonials</h1>
+
+            <div className="flex flex-row justify-between gap-5">
+              <div className="flex flex-col shadow-3xl bg-white rounded-2xl p-8 w-[30%]">
+                <h2>Mary Silas</h2>
+                <div className=" flex flex-row gap-6 my-4">
+                  <img
+                    src={imageCat1}
+                    className="h-[70px] w-[70px] rounded-4xl"
+                    alt=""
+                  />
+                  <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quia totam tempore vel?
+                  </span>
+                </div>
+                <h5>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis impedit ipsa recusandae.
+                </h5>
+              </div>
+
+              <div className="flex flex-col shadow-3xl bg-white rounded-2xl p-8 w-[30%]">
+                <h2>Mary Silas</h2>
+                <div className=" flex flex-row gap-6 my-4">
+                  <img
+                    src={imageCat1}
+                    className="h-[70px] w-[70px] rounded-4xl"
+                    alt=""
+                  />
+                  <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quia totam tempore vel?
+                  </span>
+                </div>
+                <h5>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis impedit ipsa recusandae.
+                </h5>
+              </div>
+
+              <div className="flex flex-col shadow-3xl bg-white rounded-2xl p-8 w-[30%]">
+                <h2>Mary Silas</h2>
+                <div className=" flex flex-row gap-6 my-4">
+                  <img
+                    src={imageCat1}
+                    className="h-[70px] w-[70px] rounded-4xl"
+                    alt=""
+                  />
+                  <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quia totam tempore vel?
+                  </span>
+                </div>
+                <h5>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis impedit ipsa recusandae.
+                </h5>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="mva"
+            className="flex flex-row bg-gray-200 gap-10 p-10 text-3xl rounded-3xl items-center justify-center m-5"
+          >
+            <div className="flex flex-col shadow-3xl bg-white rounded-2xl p-4 gap-5">
+              <h1>Mission</h1> <hr className="bg-gray-100" />
+              <h5>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Temporibus sed repellat optio ipsa officia ad?
+              </h5>
+            </div>
+
+            <div className="flex flex-col shadow-3xl bg-white rounded-2xl p-4 gap-5">
+              <h1>Vision</h1> <hr className="bg-gray-100" />
+              <h5>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Temporibus sed repellat optio ipsa officia ad?
+              </h5>
+            </div>
+
+            <div className="flex flex-col shadow-3xl bg-white rounded-2xl p-4 gap-5">
+              <h1>Awards</h1> <hr className="bg-gray-100" />
+              <h5>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Temporibus sed repellat optio ipsa officia ad?
+              </h5>
             </div>
           </div>
         </div>
