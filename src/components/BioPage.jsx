@@ -320,6 +320,9 @@ const BioPage = () => {
           </div>
         </div>
       </div>
+      <div>
+        <h1>Premium Features</h1>
+      </div>
     </div>
   );
 };
