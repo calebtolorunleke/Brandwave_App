@@ -4,6 +4,7 @@ import { CgProfile } from "react-icons/cg";
 import { MdFilterListOff, MdHomeFilled } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 import { RiAlarmWarningFill } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 import {
   FaGoogle,
   FaFacebookF,
@@ -12,6 +13,7 @@ import {
 } from "react-icons/fa6";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="p-3">
@@ -22,7 +24,7 @@ const SignUp = () => {
               className="h-10 w-10 md:h-12 md:w-12"
               alt="Brandwave Logo"
             />
-            <span className="text-blue-600">Brandwave</span>
+            <span className="text-blue-600">The Brandwave</span>
           </div>
 
           <CgProfile size={26} className="text-blue-600" />
@@ -44,7 +46,10 @@ const SignUp = () => {
               />
             </div>
             <RiAlarmWarningFill size={22} className="text-blue-600" />
-            <button className="py-0.5 px-3 border rounded-xl text-blue-900 text-sm">
+            <button
+              onClick={() => navigate("/signin")}
+              className="px-4 py-2 text-sm font-medium text-blue-900 border border-blue-900 rounded-xl hover:bg-blue-900 hover:text-white transition duration-200"
+            >
               Login
             </button>
             <button className="py-1 px-3 border rounded-xl bg-blue-500 text-white text-sm">

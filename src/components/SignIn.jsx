@@ -59,7 +59,7 @@ const SignIn = () => {
 
         <div className="flex flex-col items-center gap-4 max-w-sm mx-auto">
           <h1 className="text-blue-600 font-bold text-3xl">
-            Sign up On Brandwave
+            Sign In On Brandwave
           </h1>
           <p>For Better Experience</p>
           <div className="grid grid-cols-4 justify-center py-1 gap-30">
@@ -135,7 +135,7 @@ const SignIn = () => {
 
       <div className="flex justify-center py-4 my-15">
         <div className="bg-black text-white p-6 rounded-xl text-center max-w-md shadow-md">
-          <h3 className="text-lg font-semibold text-blue-400">Brandwave</h3>
+          <h3 className="text-lg font-semibold text-blue-500">Brandwave</h3>
           <p className="mt-2 mb-4 px-10 text-sm">
             Have An Insight On The Core Values Of Brandwave
           </p>
