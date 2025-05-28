@@ -1,10 +1,10 @@
 import React from "react";
 import logo from "../assets/brandwave.jpg";
+import { useNavigate } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
-import { MdFilterListOff, MdHomeFilled } from "react-icons/md";
+import { MdFilterListOff } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 import { RiAlarmWarningFill } from "react-icons/ri";
-import { useNavigate } from "react-router-dom";
 import {
   FaGoogle,
   FaFacebookF,
@@ -14,253 +14,200 @@ import {
 
 const SignUp = () => {
   const navigate = useNavigate();
+
   return (
-    <>
-      <div className="p-3">
-        <div className="flex flex-row items-center justify-between px-4 py-3 md:px-3 md:py-0">
-          <div className="flex flex-row items-center">
-            <img
-              src={logo}
-              className="h-10 w-10 md:h-12 md:w-12"
-              alt="Brandwave Logo"
+    <div className="w-full">
+      {/* Header */}
+      <header className="flex flex-wrap items-center justify-between p-4 md:px-8 bg-white shadow">
+        <div className="flex items-center gap-3">
+          <img src={logo} alt="Brandwave Logo" className="h-10 w-10" />
+          <span className="text-blue-600 font-bold text-lg">The Brandwave</span>
+        </div>
+        <div className="flex items-center gap-4 flex-wrap">
+          <CgProfile size={24} className="text-blue-600" />
+          <div className="flex items-center gap-2 border px-2 py-1 rounded-xl text-sm">
+            <MdFilterListOff size={18} />
+            <span>Filter</span>
+          </div>
+          <div className="relative w-44 md:w-60">
+            <IoSearch
+              className="absolute top-3 left-3 text-gray-400"
+              size={16}
             />
-            <span className="text-blue-600">The Brandwave</span>
-          </div>
-
-          <CgProfile size={26} className="text-blue-600" />
-          <div className="flex items-center gap-4 flex-wrap">
-            <div className="flex items-center gap-2 border px-2 py-1 rounded-xl text-sm">
-              <MdFilterListOff size={18} />
-              <span>Filter</span>
-            </div>
-            <div className="relative rounded-xl bg-gray-100 w-48 md:w-56">
-              <IoSearch
-                size={14}
-                className="absolute  left-3 top-1/2 -translate-y-1/2 text-gray-600"
-              />
-
-              <input
-                type="text"
-                placeholder="Search"
-                className="w-full py-2 pl-10 pr-3 bg-gray-100 rounded-xl text-sm focus:outline-none"
-              />
-            </div>
-            <RiAlarmWarningFill size={22} className="text-blue-600" />
-            <button
-              onClick={() => navigate("/signin")}
-              className="px-4 py-2 text-sm font-medium text-blue-900 border border-blue-900 rounded-xl hover:bg-blue-900 hover:text-white transition duration-200"
-            >
-              Login
-            </button>
-            <button className="py-1 px-3 border rounded-xl bg-blue-500 text-white text-sm">
-              Sign Up
-            </button>
-          </div>
-        </div>
-
-        <div className="flex flex-col items-center ">
-          <img src={logo} alt="" className="w-100" />
-        </div>
-
-        <div className="flex flex-col items-center gap-4 max-w-sm mx-auto">
-          <h1 className="text-blue-600 font-bold text-3xl">
-            Sign up On Brandwave
-          </h1>
-          <p>For Better Experience</p>
-          <div className="grid grid-cols-4 justify-center py-1 gap-30">
-            <div className="col-span-2">
-              <button className="flex items-center justify-center gap-3 px-5 w-60 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 mb-10 shadow-2xl ">
-                <FaGoogle className="text-red-500" />
-                Sign in with Google
-              </button>
-              <button className="flex items-center shadow-2xl justify-center gap-3 px-5 w-60  py-3 border border-gray-300 rounded-lg hover:bg-gray-100 mb-5">
-                <FaFacebookF className="text-blue-600" />
-                Sign in with Facebook
-              </button>
-            </div>
-            <div className="col-span-2">
-              <button className="flex items-center shadow-2xl justify-center gap-3 px-5 w-60  py-3 border border-gray-300 rounded-lg hover:bg-gray-100 mb-10">
-                <FaLinkedinIn className="text-blue-700" />
-                Sign in with LinkedIn
-              </button>
-              <button className="flex items-center shadow-2xl justify-center gap-3 px-5 w-60  py-3 border border-gray-300 rounded-lg hover:bg-gray-100 mb-5">
-                <FaXTwitter className="text-black" />
-                Sign in with X
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-row items-center  justify-center mx-auto gap-4 my-8 w-full max-w-sm">
-        <hr className="flex-grow border-t border-gray-300" />
-        <span className="text-gray-500 text-sm">or sign in with email</span>
-        <hr className="flex-grow border-t border-gray-300" />
-      </div>
-
-      <div className="flex flex-col items-center">
-        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center my-5">
-          <input
-            type="text"
-            placeholder="Brand Name"
-            className="w-[250px] sm:max-w-xs px-4 py-2 shadow-xl rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-
-          <input
-            type="number"
-            placeholder="Reg No"
-            className="w-[250px] sm:max-w-xs px-4 py-2 shadow-xl rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center my-5">
-          <input
-            type="text"
-            placeholder="Nigeria +234"
-            className="w-[250px] sm:max-w-xs px-4 py-2 shadow-xl rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-
-          <input
-            type="number"
-            placeholder="Phone Number"
-            className="w-[250px] sm:max-w-xs px-4 py-2 shadow-xl rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-        <div className=" flex flex-col ">
-          <label htmlFor="" className="font-bold">
-            Password
-          </label>
-          <div className=" flex flex-row gap-15 w-130">
             <input
               type="text"
-              placeholder="Password"
-              className="border border-black-300 mt-1 mb-5 p-1 w-full rounded"
+              placeholder="Search"
+              className="pl-10 pr-3 py-2 w-full rounded-xl bg-gray-100 focus:outline-none text-sm"
             />
-            <a href="">Show</a>
           </div>
-          <label htmlFor="" className="font-bold">
-            Email address
-          </label>
-          <input
-            type="text"
-            placeholder="Email address"
-            className="border border-black-300 mt-1 mb-5 p-1 w-full rounded"
+          <RiAlarmWarningFill size={22} className="text-blue-600" />
+          <button
+            onClick={() => navigate("/signin")}
+            className="text-sm text-blue-900 border border-blue-900 px-4 py-2 rounded-xl hover:bg-blue-900 hover:text-white transition"
+          >
+            Login
+          </button>
+          <button className="text-sm bg-blue-500 text-white px-4 py-2 rounded-xl">
+            Sign Up
+          </button>
+        </div>
+      </header>
+
+      {/* Main Form Section */}
+      <main className="px-4 py-8 max-w-4xl mx-auto">
+        {/* Branding */}
+        <div className="flex justify-center mb-6">
+          <img src={logo} alt="Brandwave" className="h-16" />
+        </div>
+
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-bold text-blue-600">
+            Sign up On Brandwave
+          </h1>
+          <p className="text-gray-600 mt-1">For Better Experience</p>
+        </div>
+
+        {/* Social Buttons */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center mb-10">
+          <SocialButton
+            icon={<FaGoogle className="text-red-500" />}
+            text="Sign in with Google"
           />
-          <label htmlFor="" className="font-bold">
-            Industry
-          </label>
-          <input
-            type="text"
-            placeholder="Enter your industry"
-            className="border border-gray-300 mt-1 mb-5 p-1 w-full rounded"
+          <SocialButton
+            icon={<FaFacebookF className="text-blue-600" />}
+            text="Sign in with Facebook"
+          />
+          <SocialButton
+            icon={<FaLinkedinIn className="text-blue-700" />}
+            text="Sign in with LinkedIn"
+          />
+          <SocialButton
+            icon={<FaXTwitter className="text-black" />}
+            text="Sign in with X"
+          />
+        </div>
+
+        {/* Divider */}
+        <div className="flex items-center gap-4 mb-8">
+          <hr className="flex-grow border-t border-gray-300" />
+          <span className="text-gray-500 text-sm">or sign in with email</span>
+          <hr className="flex-grow border-t border-gray-300" />
+        </div>
+
+        {/* Form Inputs */}
+        <form className="space-y-6">
+          <ResponsiveInputGroup
+            inputs={[
+              { placeholder: "Brand Name", type: "text" },
+              { placeholder: "Reg No", type: "number" },
+            ]}
+          />
+          <ResponsiveInputGroup
+            inputs={[
+              { placeholder: "Nigeria +234", type: "text" },
+              { placeholder: "Phone Number", type: "number" },
+            ]}
           />
 
-          <label htmlFor="" className="font-bold">
-            Location
-          </label>
-          <input
-            type="text"
-            placeholder="Enter your location"
-            className="border border-gray-300 mt-1 mb-5 p-1 w-full rounded"
+          <TextInput
+            label="Password"
+            type="password"
+            placeholder="Enter password"
           />
-
-          <label htmlFor="" className="font-bold">
-            C.E.O Name
-          </label>
-          <input
-            type="text"
-            placeholder="Enter C.E.O name"
-            className="border border-gray-300 mt-1 mb-5 p-1 w-full rounded"
-          />
-          <label htmlFor="" className="font-bold">
-            Vision
-          </label>
-          <input
-            type="text"
-            placeholder="Enter your vision statement"
-            className="border border-gray-300 mt-1 mb-5 p-1 w-full rounded"
-          />
-          <label htmlFor="" className="font-bold">
-            Add story
-          </label>
-          <input
-            type="text"
-            placeholder="Tell your brand story"
-            className="border border-gray-300 mt-1 mb-5 p-1 w-full rounded"
-          />
-          <label htmlFor="" className="font-bold">
-            Logo upload{" "}
-          </label>
-          <input
-            type="text"
-            placeholder="Upload your logo"
-            className="border border-gray-300 mt-1 mb-5 p-1 w-full rounded"
-          />
-
-          <label htmlFor="" className="font-bold">
-            Pictures Upload{" "}
-          </label>
-          <input
-            type="text"
+          <TextInput label="Email address" placeholder="Email address" />
+          <TextInput label="Industry" placeholder="Enter your industry" />
+          <TextInput label="Location" placeholder="Enter your location" />
+          <TextInput label="C.E.O Name" placeholder="Enter C.E.O name" />
+          <TextInput label="Vision" placeholder="Enter your vision statement" />
+          <TextInput label="Add story" placeholder="Tell your brand story" />
+          <TextInput label="Logo Upload" placeholder="Upload your logo" />
+          <TextInput
+            label="Pictures Upload"
             placeholder="Upload associated pictures"
-            className="border border-gray-300 mt-1 mb-5 p-1 w-full rounded"
           />
-
-          <label htmlFor="" className="font-bold">
-            Create catalogue{" "}
-          </label>
-          <input
-            type="text"
+          <TextInput
+            label="Create Catalogue"
             placeholder="Create a new catalogue"
-            className="border border-gray-300 mt-1 mb-5 p-1 w-full rounded"
           />
-        </div>
 
-        <div className="flex flex-row gap-3 mb-7">
-          <button className="py-1 border border-black rounded  px-12 text-red-400">
-            Cancel
-          </button>
-          <button className="py-1 bg-blue-600 rounded  px-12 text-white">
-            Proceed
-          </button>
-        </div>
-      </div>
+          {/* Buttons */}
+          <div className="flex justify-center gap-4 mt-6">
+            <button
+              type="button"
+              className="px-10 py-2 border border-gray-400 text-red-500 rounded"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="px-10 py-2 bg-blue-600 text-white rounded"
+            >
+              Proceed
+            </button>
+          </div>
+        </form>
+      </main>
 
-      <div className="flex justify-center py-4 my-15">
-        <div className="bg-black text-white p-6 rounded-xl text-center max-w-md shadow-md">
+      {/* Footer CTA */}
+      <section className="flex justify-center my-12">
+        <div className="bg-black text-white p-6 rounded-xl text-center max-w-md">
           <h3 className="text-lg font-semibold text-blue-400">Brandwave</h3>
-          <p className="mt-2 mb-4 px-10 text-sm">
+          <p className="mt-2 mb-4 text-sm">
             Have An Insight On The Core Values Of Brandwave
           </p>
           <a href="#" className="text-purple-400 underline text-sm">
             About Us →
           </a>
         </div>
-      </div>
+      </section>
 
-      <footer className="bg-blue-600 text-white text-center text-sm py-10 w-full">
-        <div className=" border-b border-white p-5 flex felx-col justify-center  gap-4 mb-2 mx-10">
-          <a href="#" className="border-r border-white pr-4 hover:underline">
-            Privacy Policy
-          </a>{" "}
-          <a href="#" className="border-r border-white pr-4 hover:underline">
-            Faq
-          </a>
-          <a href="#" className="border-r border-white pr-4 hover:underline">
-            Contact Us
-          </a>
-          <a href="#" className="hover:underline">
-            Help
-          </a>
+      {/* Footer Links */}
+      <footer className="bg-blue-600 text-white text-center py-10">
+        <div className="flex flex-wrap justify-center gap-4 border-b border-white pb-4 mx-10">
+          {["Privacy Policy", "FAQ", "Contact Us", "Help"].map((item) => (
+            <a key={item} href="#" className="hover:underline text-sm">
+              {item}
+            </a>
+          ))}
         </div>
-        <p className="text-xs m-5">© 2025 Brandwave All Rights Reserved</p>
+        <p className="text-xs mt-4">© 2025 Brandwave. All Rights Reserved</p>
         <p className="text-xs">
-          Brandwave - a Techyjaunt group Project for the Capstone Project, Group
-          K
+          Brandwave - a Techyjaunt group Capstone Project, Group K
         </p>
       </footer>
-    </>
+    </div>
   );
 };
+
+const SocialButton = ({ icon, text }) => (
+  <button className="flex items-center justify-center gap-3 px-5 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 w-64 shadow">
+    {icon}
+    {text}
+  </button>
+);
+
+const ResponsiveInputGroup = ({ inputs }) => (
+  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    {inputs.map((input, i) => (
+      <input
+        key={i}
+        type={input.type}
+        placeholder={input.placeholder}
+        className="w-full sm:w-[250px] px-4 py-2 shadow-xl rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    ))}
+  </div>
+);
+
+const TextInput = ({ label, placeholder, type = "text" }) => (
+  <div className="flex flex-col">
+    <label className="font-bold">{label}</label>
+    <input
+      type={type}
+      placeholder={placeholder}
+      className="border border-gray-300 mt-1 mb-4 p-2 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+  </div>
+);
 
 export default SignUp;
